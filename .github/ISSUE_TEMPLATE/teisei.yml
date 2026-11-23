@@ -1,0 +1,32 @@
+name: 本文の誤り
+description: 本文の誤り（OCR の誤認識・脱字・ルビの混入など）を知らせる
+title: "[修正案] 山村暮鳥 詩篇（『日本現代文學全集54 千家元麿・山村暮鳥・佐藤惣之助・福士幸次郎・堀口大學集』より） "
+labels: ["修正案"]
+body:
+  - type: markdown
+    attributes:
+      value: 原本の画像は、README の底本のリンクから見られます。わかる範囲で書いてください。
+  - type: input
+    id: block
+    attributes:
+      label: 段落ID
+      description: "honbun/ の行頭にある ID（例: yamamura-bocho-e9d78a0c-000001）"
+    validations:
+      required: true
+  - type: textarea
+    id: before
+    attributes:
+      label: いまの本文（直したい所の前後）
+    validations:
+      required: true
+  - type: textarea
+    id: after
+    attributes:
+      label: 直した本文
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 理由・根拠
+      description: 原本ではどうなっているか、何コマ目か など
